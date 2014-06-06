@@ -1,0 +1,47 @@
+// [PackageDev] target_format: plist, ext: tmLanguage
+{ "name": "SNES Assembly",
+  "scopeName": "source.snes",
+  "fileTypes": ["asm"],
+
+  "patterns": [
+  	{  "name": "comment.line.snes",
+  	   "match": ";.*$"
+  	},
+  	{  "name": "storage.type",
+  	   "match": "\\.[a-zA-Z_]+\\b",
+       "comment": "directives"
+  	},
+  	{  "name": "support.function.mnemonic.snes", //"keyword.control.snes",
+  	   "match": "\\b(adc|and|asl|bcc|bcs|beq|bit|bmi|bne|bpl|bra|brk|brl|bvc|bvs|clc|cld|cli|clv|cmp|cop|cpx|cpy|dea|dec|dex|dey|eor|ina|inc|inx|iny|jml|jmp|jsl|jsr|lda|ldx|ldy|lsr|mvn|mvp|nop|ora|pea|pei|per|pha|phb|phd|phk|php|phx|phy|pla|plb|pld|plp|plx|ply|rep|rol|ror|rti|rtl|rts|sbc|sec|sed|sei|sep|sta|stp|stx|sty|stz|tax|tay|tcd|tcs|tdc|trb|tsb|tsc|tsx|txa|txs|txy|tya|tyx|wai|wdm|xba|xce|ADC|AND|ASL|BCC|BCS|BEQ|BIT|BMI|BNE|BPL|BRA|BRK|BRL|BVC|BVS|CLC|CLD|CLI|CLV|CMP|COP|CPX|CPY|DEA|DEC|DEX|DEY|EOR|INA|INC|INX|INY|JML|JMP|JSL|JSR|LDA|LDX|LDY|LSR|MVN|MVP|NOP|ORA|PEA|PEI|PER|PHA|PHB|PHD|PHK|PHP|PHX|PHY|PLA|PLB|PLD|PLP|PLX|PLY|REP|ROL|ROR|RTI|RTL|RTS|SBC|SEC|SED|SEI|SEP|STA|STP|STX|STY|STZ|TAX|TAY|TCD|TCS|TDC|TRB|TSB|TSC|TSX|TXA|TXS|TXY|TYA|TYX|WAI|WDM|XBA|XCE)\\b",
+  	   "comment": "65816 opcodes"
+    },
+  	{  "name": "support.function.mnemonic.gsu",
+  	   "match": "\\b(add|adc|alt1|alt2|alt3|and|asr|bcc|bcs|beq|bge|bic|blt|bmi|bne|bpl|bra|bvc|bvs|cache|cmode|cmp|color|dec|div2|fmult|from|getb|getbh|getbl|getbs|getc|hib|ibt|inc|iwt|jal|jmp|ldb|ldw|lea|link|ljmp|lm|lms|lmult|lob|loop|lsr|merge|move|moveb|moves|movew|mult|nop|not|or|plot|pop|push|ramb|ret|rol|romb|ror|rpix|sbc|sbk|sex|sm|sms|stb|stop|stw|sub|swap|to|umult|with|xor|ADD|ADC|ALT1|ALT2|ALT3|AND|ASR|BCC|BCS|BEQ|BGE|BIC|BLT|BMI|BNE|BPL|BRA|BVC|BVS|CACHE|CMODE|CMP|COLOR|DEC|DIV2|FMULT|FROM|GETB|GETBH|GETBL|GETBS|GETC|HIB|IBT|INC|IWT|JAL|JMP|LDB|LDW|LEA|LINK|LJMP|LM|LMS|LMULT|LOB|LOOP|LSR|MERGE|MOVE|MOVEB|MOVES|MOVEW|MULT|NOP|NOT|OR|PLOT|POP|PUSH|RAMB|RET|ROL|ROMB|ROR|RPIX|SBC|SBK|SEX|SM|SMS|STB|STOP|STW|SUB|SWAP|TO|UMULT|WITH|XOR)\\b",
+  	   "comment": "superfx opcodes"
+    },
+    {  "name": "support.function.mnemonic.spc700",
+       "match": "\\b(adc|addw|and|and1|asl|bbc|bbs|bcc|bcs|beq|bmi|bne|bpl|bvc|bvs|bra|brk|call|cbne|clr1|clrc|clrp|clrv|cmp|cmpw|daa|das|dbnz|dec|decw|di|div|ei|eor|eor1|inc|incw|jmp|lsr|mov|mov1|movw|mul|nop|not1|notc|or|or1|pcall|pop|ret|reti|rol|ror|sbc|set1|setc|setp|sleep|stop|subw|tcall|tclr1|tset1|xcn|ADC|ADDW|AND|AND1|ASL|BBC|BBS|BCC|BCS|BEQ|BMI|BNE|BPL|BVC|BVS|BRA|BRK|CALL|CBNE|CLR1|CLRC|CLRP|CLRV|CMP|CMPW|DAA|DAS|DBNZ|DEC|DECW|DI|DIV|EI|EOR|EOR1|INC|INCW|JMP|LSR|MOV|MOV1|MOVW|MUL|NOP|NOT1|NOTC|OR|OR1|PCALL|POP|RET|RETI|ROL|ROR|SBC|SET1|SETC|SETP|SLEEP|STOP|SUBW|TCALL|TCLR1|TSET1|XCN)\\b",
+       "comment": "spc700 opcodes"
+    },
+  	{  "name": "entity.name.function",
+  	   "match": "\\b(x|y|a|s|r0|r1|r2|r3|r4|r5|r6|r7|r8|r9|r10|r11|r12|r13|r14|r15|sp|lr|pc|ya|psw|X|Y|A|S|R0|R1|R2|R3|R4|R5|R6|R7|R8|R9|R10|R11|R12|R13|R14|R15|SP|LR|PC|YA|PSW)\\b"
+  	},
+    {  "name": "constant.other.snes",
+       "match": "#?[<>^|!]?([$][0-9a-fA-F]+|[0-9]+|%[01]+|[0-9][0-9a-fA-F]*h)\\b",
+       "comment": "numbers with or without # prefix and ca65/wdc816 size prefix: 1239 $FEEDBACC 0FEEDBACCh %1101"
+    },
+    {  "name": "string.quoted.other",
+       "match": "\\b(@|[~_]{0,2})[a-zA-Z_][0-9a-zA-Z_]*:?",
+       "comment": "directives"
+    },
+    { "name": "string.quoted.double.snes",
+      "begin": "\"",
+      "end": "\"|$"
+    },
+    { "name": "string.quoted.single.snes",
+      "begin": "'",
+      "end": "'|$"
+    }
+  ],
+  "uuid": "f8250fd4-9960-445a-aa91-eb4c87050eee"
+}
