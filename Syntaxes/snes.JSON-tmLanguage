@@ -1,7 +1,7 @@
 // [PackageDev] target_format: plist, ext: tmLanguage
 { "name": "SNES Assembly",
   "scopeName": "source.snes",
-  "fileTypes": ["asm"],
+  "fileTypes": ["asm", "s"],
 
   "patterns": [
   	{  "name": "comment.line.snes",

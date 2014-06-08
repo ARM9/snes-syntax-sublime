@@ -5,6 +5,7 @@
 	<key>fileTypes</key>
 	<array>
 		<string>asm</string>
+		<string>s</string>
 	</array>
 	<key>name</key>
 	<string>SNES Assembly</string>
