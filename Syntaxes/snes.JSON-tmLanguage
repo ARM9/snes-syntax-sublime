@@ -20,7 +20,7 @@
   	   "comment": "superfx opcodes"
     },
     {  "name": "support.function.mnemonic.spc700",
-       "match": "\\b(adc|addw|and|and1|asl|bbc|bbs|bcc|bcs|beq|bmi|bne|bpl|bvc|bvs|bra|brk|call|cbne|clr1|clrc|clrp|clrv|cmp|cmpw|daa|das|dbnz|dec|decw|di|div|ei|eor|eor1|inc|incw|jmp|lsr|mov|mov1|movw|mul|nop|not1|notc|or|or1|pcall|pop|ret|reti|rol|ror|sbc|set1|setc|setp|sleep|stop|subw|tcall|tclr1|tset1|xcn|ADC|ADDW|AND|AND1|ASL|BBC|BBS|BCC|BCS|BEQ|BMI|BNE|BPL|BVC|BVS|BRA|BRK|CALL|CBNE|CLR1|CLRC|CLRP|CLRV|CMP|CMPW|DAA|DAS|DBNZ|DEC|DECW|DI|DIV|EI|EOR|EOR1|INC|INCW|JMP|LSR|MOV|MOV1|MOVW|MUL|NOP|NOT1|NOTC|OR|OR1|PCALL|POP|RET|RETI|ROL|ROR|SBC|SET1|SETC|SETP|SLEEP|STOP|SUBW|TCALL|TCLR1|TSET1|XCN)\\b",
+       "match": "\\b(adc|addw|and|and1|asl|bbc|bbs|bcc|bcs|beq|bmi|bne|bpl|bvc|bvs|bra|brk|call|cbne|clr1|clrc|clrp|clrv|cmp|cmpw|daa|das|dbnz|dec|decw|di|div|ei|eor|eor1|inc|incw|jmp|lsr|mov|mov1|movw|mul|nop|not1|notc|or|or1|pcall|pop|push|ret|reti|rol|ror|sbc|set1|setc|setp|sleep|stop|subw|tcall|tclr1|tset1|xcn|ADC|ADDW|AND|AND1|ASL|BBC|BBS|BCC|BCS|BEQ|BMI|BNE|BPL|BVC|BVS|BRA|BRK|CALL|CBNE|CLR1|CLRC|CLRP|CLRV|CMP|CMPW|DAA|DAS|DBNZ|DEC|DECW|DI|DIV|EI|EOR|EOR1|INC|INCW|JMP|LSR|MOV|MOV1|MOVW|MUL|NOP|NOT1|NOTC|OR|OR1|PCALL|POP|PUSH|RET|RETI|ROL|ROR|SBC|SET1|SETC|SETP|SLEEP|STOP|SUBW|TCALL|TCLR1|TSET1|XCN)\\b",
        "comment": "spc700 opcodes"
     },
   	{  "name": "entity.name.function",
